@@ -27,19 +27,5 @@
         "destination": "https://almeidagomespaisagismo.com.br/:path*",
         "permanent": true
       }
-    ],
-    "rewrites": [
-      {
-        "source": "/sitemap.xml",
-        "destination": "/sitemap.xml"
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt"
-      },
-      {
-          "source": "/:path*",
-          "destination": "/" 
-      }
     ]
   }
