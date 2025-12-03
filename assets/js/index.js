@@ -1,5 +1,5 @@
-document.getElementById('menu-icon').addEventListener('click',function(){var navLinks=document.getElementById('nav-links');var menuIcon=document.getElementById('menu-icon');var menuLogo=document.getElementById('menu-logo');navLinks.classList.toggle('active');if(navLinks.classList.contains('active')){menuIcon.src="./img/fechar-menu.webp";menuLogo.classList.add('visible');item.addEventListener("click",()=>{navLinks.classList.toggle("active",!1)
-menuIcon.src="/img/abrir-menu.png";menuLogo.classList.remove('visible')})}else{menuIcon.src="/img/abrir-menu.png";menuLogo.classList.remove('visible')}})
+document.getElementById('menu-icon').addEventListener('click',function(){var navLinks=document.getElementById('nav-links');var menuIcon=document.getElementById('menu-icon');var menuLogo=document.getElementById('menu-logo');navLinks.classList.toggle('active');if(navLinks.classList.contains('active')){menuIcon.src="./assets/img/fechar-menu.webp";menuLogo.classList.add('visible');item.addEventListener("click",()=>{navLinks.classList.toggle("active",!1)
+menuIcon.src="/assets/img/abrir-menu.png";menuLogo.classList.remove('visible')})}else{menuIcon.src="/assets/img/abrir-menu.png";menuLogo.classList.remove('visible')}})
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     if (!track) return; 

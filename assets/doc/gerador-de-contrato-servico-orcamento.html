@@ -25,18 +25,18 @@
     <meta name="google-site-verification" content="rj9-yKQenuTL7WznZzLhnZhRRqalrW8B9ptmhuewFiA">
     <meta name="ahrefs-site-verification" content="b3bf5b6aa98bea70da2fde3847d7843db33283b82f85e4656c9564b9d393680a">
     <title>Gerador Online de Contratos, Recibos e Orçamentos da Almeida Gomes Paisagismo</title>
-    <link rel="icon" sizes="32x32" href="/img/favicon.ico">
-    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="mask-icon" href="/img/favicon.ico">
-    <link rel="canonical" href="https://almeidagomespaisagismo.com.br/doc/gerador-de-contrato-servico-orcamento.html/">
+    <link rel="icon" sizes="32x32" href="/assets/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="mask-icon" href="/assets/img/favicon.ico">
+    <link rel="canonical" href="https://almeidagomespaisagismo.com.br/assets/doc/gerador-de-contrato-servico-orcamento.html/">
     <!-- Open Graph tags are also recommended -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Almeida Gomes Paisagismo">
-    <meta property="og:url" content="https://almeidagomespaisagismo.com.br/doc/gerador-de-contrato-servico-orcamento.html">
-    <meta property="og:image" content="https://almeidagomespaisagismo.com.br/img/logo-escura.webp">
+    <meta property="og:url" content="https://almeidagomespaisagismo.com.br/assets/doc/gerador-de-contrato-servico-orcamento.html">
+    <meta property="og:image" content="https://almeidagomespaisagismo.com.br/assets/img/logo-escura.webp">
     <meta name="og:image:width" content="1200">
     <meta name="og:image:height" content="630">
     <meta property="og:title" content="Gerador Online de Contratos, Recibos e Orçamentos da Almeida Gomes Paisagismo">
@@ -114,9 +114,9 @@
     <!-- Cabeçalho (Branding) -->
     <header class="w-full max-w-4xl p-4 mb-6 bg-white rounded-xl shadow-md flex items-center justify-center space-x-4">
         <!-- Placeholder para o Logo da Almeida Gomes Paisagismo -->
-        <a href="https://almeidagomespaisagismo.com.br/doc/gerador-de-contrato-servico-orcamento.html" aria-label="Gerador Online de Documentos">
-            <img src="/img/logo-clara.webp" alt="Logo Almeida Gomes Paisagismo" class="w-16 h-16 rounded-full object-cover"
-             onerror="this.onerror=null; this.src='/img/logo-clara.webp';">
+        <a href="https://almeidagomespaisagismo.com.br/assets/doc/gerador-de-contrato-servico-orcamento.html" aria-label="Gerador Online de Documentos">
+            <img src="/assets/img/logo-clara.webp" alt="Logo Almeida Gomes Paisagismo" class="w-16 h-16 rounded-full object-cover"
+             onerror="this.onerror=null; this.src='/assets/img/logo-clara.webp';">
         </a>
         <div class="text-left">
             <h1 class="text-3xl font-bold agp-text-green">Almeida Gomes Paisagismo</h1>
@@ -257,7 +257,7 @@
 
     <footer class="w-full p-4 mb-1 rounded-x1 flex justify-center space-x-6">
         <a href="https://almeidagomespaisagismo.com.br/" aria-label="Logo Almeida Gomes Paisagismo" target="_blank">
-            <img src="/img/logo-escura.webp" alt="Logo Almeida Gomes Paisagismo" class="w-12 h-12 rounded-full object-cover">
+            <img src="/assets/img/logo-escura.webp" alt="Logo Almeida Gomes Paisagismo" class="w-12 h-12 rounded-full object-cover">
         </a>
         <div class="text-left">
             <p class="text-sm text-gray-400 mt-0">
@@ -274,12 +274,13 @@
         // Dados fixos da empresa (Almeida Gomes Paisagismo)
         const companyInfo = {
             name: "ALMEIDA GOMES PAISAGISMO LTDA",
-            cnpj: "38.433.248/0001-19 (CNPJ)",
+            cnpj: "38.433.248/0001-19",
             address: "Quadra 30 Lote 10 Jardim América III Águas Lindas de Goiás - GO. Brasil",
-            email: "almeidagomespaisagismo@gmail.com",
+            email: "almeidagomespaisagismo@almeidagomespaisagismo.com.br",
             representative: "Representante Legal",
             tel: "(61) 99958-8869",
             instagram: "@almeidagomespaisagismo",
+            email: "almeidagomespaisagismo@almeidagomespaisagismo.com.br",
             site: "https://almeidagomespaisagismo.com.br"
         };
 
@@ -732,6 +733,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                             <p>CNPJ: ${companyInfo.cnpj}</p>
                             <p>Whatsapp: ${companyInfo.tel}</p>
                             <p>Instagram: ${companyInfo.instagram}</p>
+                            <p>E-mail: ${companyInfo.email}</p>
                             <p>Site: ${companyInfo.site}</p>
                         </div>
                         <div class="space-y-1">
@@ -825,6 +827,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                         Endereço: ${companyInfo.address}<br>
                         Whatsapp: ${companyInfo.tel}<br>
                         Instagram: ${companyInfo.instagram}<br>
+                        E-mail: ${companyInfo.email}<br>
                         Site: ${companyInfo.site}
                     </p>
 
