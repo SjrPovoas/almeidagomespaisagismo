@@ -142,7 +142,7 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 <p>
 
 ---
-Última atualização: 18/12/2025 - 15:22
+Última atualização: 25/04/2026 - 17:26
 <p align="center">
-  &COPY; 2025 SjrPovoaS
+  &COPY; 2026 SjrPovoaS
 </p>
