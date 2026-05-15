@@ -22,7 +22,7 @@ Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeidagome
 ---
 ## AGRADECIMENTOS
 <div>
-  Ao <a href="https://almeidagomespaisagismo.com.br/assets/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
+  Ao <a href="https://almeidagomespaisagismo.com.br/#quem-somos" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
 </div>
 
 <br>
