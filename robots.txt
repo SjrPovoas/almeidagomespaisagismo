@@ -3,4 +3,4 @@ Sitemap: https://almeidagomespaisagismo.com.br/sitemap.xml
 User-agent: *
 Allow: /
 
-# This file was generated on Mon, 11 May 2026 12:00:00 +0000
+# This file was generated on Fri, 15 May 2026 13:00:00 +0000

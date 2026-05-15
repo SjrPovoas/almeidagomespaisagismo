@@ -139,10 +139,96 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 
 </details>
 
-<p>
+---
+
+## 4. CONFIGURAÇÃO DE REDIRECIONAMENTO
+
+****
+<details>
+<summary>DOMÍNIO | CONFIGURAÇÃO | DESTINO</summary>
+<ul>
+<li>almeidagomespaisagismo.com.br	| Connect to Production	| (Nenhum, ele é o principal)</li>
+<li>www.almeidagomespaisagismo.com.br	| Redirect (301)	| almeidagomespaisagismo.com.br</li>
+</ul>
+</details>
+
+## 5. FLUXO DE ENVIO E RECEBIMENTO DE EMAIL CORPORATIVO
+
+<details>
+<summary>ZOHO EMAIL</summary>
+<ul>
+<li><b>Serviço de encaminhamento (RELAY)</b>
+<br>
+Ele não possui uma caixa de entrada para fazer login e ler e-mails. Ele apenas recebe a mensagem enviada para o seu domínio e a "empurra" instantaneamente para outro endereço (como o seu Gmail Corporativo).
+<br>
+O foco principal é o recebimento. Para responder ou enviar e-mails usando o seu domínio através dele, você configura o SMTP de outro provedor ou usa os recursos de "Enviar como" do Gmail.
+<br>
+Oferece um plano gratuito generoso com aliases ilimitados.
+<br>
+Uso do Alias Global (Catch-all): Uma função muito comum aqui é o "catch-all". Você pode configurar um asterisco (*@seudominio.com). Assim, qualquer coisa que inventar antes do "@" (como teste@, suporte@, vendas@) será entregue na sua conta principal, sem você precisar criar um por um.
+</li>
+</ul>
+<ul>
+<li><b>Verificação de Domínio (Obrigatório primeiro)</b>
+<br>
+Nome: @ ou zb******* (o Zoho te dará esse código)
+<br>
+Valor: zoho-verification=zb********.zmverify.zoho.com
+</li>
+<li><b>Registros MX</b>
+<br>
+Prioridade | Host/Nome | Valor (Destino)
+<br>
+10 | @ | mx.zoho.com
+<br>
+20 | @ | mx2.zoho.com
+<br>
+50 | @ | mx3.zoho.com
+</li>
+<li><b>Registro TXT (DKIM) para que você possa enviar e-mails sem ser bloqueado pelos servidores de destino</b>
+<br>
+Nome: zmail._domainkey
+<br>
+Valor: chave criptográfica longa
+</li>
+<li><b>Registro TXT (SPF) para garantir que os e-mails não caiam no spam</b>
+<br>
+Nome: @
+<br>
+Valor: v=spf1 include:zoho.com -all
+<br>
+<br>
+<b>ATT:</b> Após inserir os registros, você precisa clicar em "Verificar" no painel administrativo deles.
+<br>
+<br>
+</li>
+<li><b>Configurações do Servidor SMTP (Google)</b>
+<br>
+Servidor SMTP:	smtp.gmail.com
+<br>
+Porta (SSL):	465
+<br>
+Porta (TLS/STARTTLS):	587 (Recomendada para Next.js/Node.js)
+<br>
+Requer Autenticação:	Sim
+<br>
+Usuário: serralheriaesoldagens@gmail.com
+<br>
+Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
+</li>
+</ul>
+</details>
 
 ---
-Última atualização: 11/05/2026 - 14:13
+## 7. CONHEÇA O TIME
+
+Nome | Título | Linkedin | X/Twitter | GitHub | Instagram
+---|---|---|---|---|---
+Silvio Povoas | Desenvolvedor | [sjrpovoas](https://www.linkedin.com/in/sjrpovoas) | [sjrpovoas](https://www.x.com/sjrpovoas) | [SjrPovoas](https://github.com/SjrPovoas) | [@silviopovoasjunior](https://www.instagram.com/silviopovoasjunior)
+Manoel Gomes | Empresário | X | X | X | [@almeidagomespaisagismo](https://www.instagram.com/almeidagomespaisagismo)
+
+***
+Última atualização: 15/05/2026 - 13:43
 <p align="center">
   &COPY; 2026 SjrPovoaS
 </p>
