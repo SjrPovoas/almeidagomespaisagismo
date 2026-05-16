@@ -155,7 +155,7 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 ## 5. FLUXO DE ENVIO E RECEBIMENTO DE EMAIL CORPORATIVO
 
 <details>
-<summary>ZOHO EMAIL</summary>
+<summary>IMPROVMX</summary>
 <ul>
 <li><b>Serviço de encaminhamento (RELAY)</b>
 <br>
@@ -165,7 +165,61 @@ O foco principal é o recebimento. Para responder ou enviar e-mails usando o seu
 <br>
 Oferece um plano gratuito generoso com aliases ilimitados.
 <br>
-Uso do Alias Global (Catch-all): Uma função muito comum aqui é o "catch-all". Você pode configurar um asterisco (*@seudominio.com). Assim, qualquer coisa que inventar antes do "@" (como teste@, suporte@, vendas@) será entregue na sua conta principal, sem você precisar criar um por um.
+Uma vez dentro do painel do ImprovMX, você verá que ele já cria automaticamente um alias de * (catch-all) apontando para o seu Gmail. Se quiser criar especificamente o contato@, basta adicionar uma linha lá dentro.
+<br>
+Após salvar as alterações no DNS, o próprio painel do ImprovMX vai mostrar um aviso verde de "Active".
+<br>
+<li><b>Criar conta gratuita</b>
+<br>
+Acesse https://improvmx.com/ e utilize o email do gmail de preferência.
+</li>
+</ul>
+<ul>
+<li><b>Registros MX</b>
+<br>
+Prioridade | Host/Nome | Valor (Destino)
+<br>
+10 | @ | mx1.improvmx.com
+<br>
+20 | @ | mx2.improvmx.com
+</li>
+<li><b>Registro TXT (SPF) para garantir que os e-mails não caiam no spam</b>
+<br>
+Nome: @
+<br>
+Valor: v=spf1 include:spf.improvmx.com ~all
+</li>
+<li><b>Configurações do Servidor SMTP (Google)</b>
+<br>
+Nome: Almeida Gomes Paisagismo
+<br>
+Endereço de e-mail:	almeidagomespaisagismo@almeidagomespaisagismo.com.br
+<br>
+Tratar como um alias: Sim
+<br>
+Servidor SMTP:	smtp.gmail.com
+<br>
+Porta (TLS/STARTTLS):	587 (Recomendada para Next.js/Node.js)
+<br>
+Requer Autenticação:	Sim
+<br>
+Usuário: almeidagomespaisagismo@gmail.com
+<br>
+Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
+</li>
+</ul>
+</details>
+
+<details>
+<summary>ZOHO MAIL (CLIENTE QUERIA TUDO NO GMAIL)</summary>
+<ul>
+<li><b>É um serviço de hospedagem de email.</b>
+<br>
+O alias é uma camada extra sobre uma conta de usuário existente. Ele não possui uma caixa de entrada para fazer login e ler e-mails.
+<br>
+Escolha o Zoho Mail se você precisa de uma conta profissional real, onde possa logar, guardar e-mails e ter uma estrutura de empresa.
+<br>
+Oferece um plano gratuito generoso com aliases ilimitados.
 </li>
 </ul>
 <ul>
@@ -212,7 +266,7 @@ Porta (TLS/STARTTLS):	587 (Recomendada para Next.js/Node.js)
 <br>
 Requer Autenticação:	Sim
 <br>
-Usuário: serralheriaesoldagens@gmail.com
+Usuário: almeidagomespaisagismo@gmail.com
 <br>
 Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
 </li>
