@@ -82,6 +82,12 @@ Você pode fazer isso com os seguintes comandos, substituindo "Seu Nome" e "seu@
 ```
 
 Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar na linha de comando.
+<p>
+Para rodar o servidor .html:
+<br>
+Opção 1 (Barra de status): Olhe para o canto inferior direito do VS Code. Você verá um botão escrito Go Live. Clique nele.
+<br>
+Opção 2 (Botão direito): Abra o seu arquivo index.html, clique com o botão direito em qualquer lugar do código e selecione Open with Live Server
 
 ---
 ## 2. TECNOLOGIAS USADAS

@@ -41,3 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         nextButton.click();
     }, 5000); });
+    window.addEventListener('scroll', function() {
+        const botaoFlutuante = document.querySelector('.whatsapp');
+        if (window.scrollY > 200) {
+            botaoFlutuante.classList.add('show');
+        } else {
+            botaoFlutuante.classList.remove('show');
+        }
+    });

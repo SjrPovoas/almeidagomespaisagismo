@@ -603,6 +603,8 @@ header nav ul li a {
 #contato .container a {
   text-decoration: none;
   color: var(--cor-primaria);}
+  
+  
 /* Seção Final */
 .final {
   position: relative;
@@ -639,7 +641,10 @@ header nav ul li a {
   color: var(--cor-primaria);}
 .final-content button:hover {
   background: var(--cor-texto);
-  color: var(--cor-primaria);}
+  color: var(--cor-primaria);
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
 .final-content button a:hover {
   color: var(--cor-secundaria);}
 /* Seção Avaliação do Google */
@@ -656,10 +661,29 @@ header nav ul li a {
   cursor: pointer;
   transition: background 0.3s;}
 #avaliacao .final-content a {
-  color: var(--cor-terciaria);}
+  color: var(--cor-terciaria);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 450px; /* Mantém uma largura elegante */
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
 #avaliacao .final-content :hover {
   background: var(--cor-texto);
-  color: var(--cor-secundaria);}
+  color: var(--cor-secundaria);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+  
+
 /* Footer */
 footer {
   background: var(--cor-terciaria);
@@ -672,7 +696,7 @@ footer .logo-footer img {
   width: 20%;}
 footer .container-footer {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   margin: 0 5%;}
 footer .container-externo-social {
@@ -718,25 +742,37 @@ footer a {
   padding-right: 20px;
   font-family: var(--fonte-secundaria);
   margin-left: 10px;}
+ /* CONTAINER PRINCIPAL: Agora ele controla a exibição e o alinhamento de ambos os botões */
 .whatsapp {
   position: fixed;
+  bottom: 24px;    /* Distância do rodapé */
+  right: 15px;     /* Distância da lateral direita */
+  z-index: 9999;   /* Mantém acima de tudo */
+  /* Flexbox para alinhar os elementos verticalmente à direita */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 105px;
-  right: 7px;
-  gap: 20px;
-  font-family: var(--fonte-secundaria);
-  color: #000;
-  z-index: 1000;}
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;       /* Espaçamento vertical entre a seta e o WhatsApp */
+  /* Estado inicial: escondido (o JS vai adicionar a classe .show) */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease; }
+/* Classe ativada pelo JavaScript */
+.whatsapp.show {
+  opacity: 1;
+  visibility: visible; }
+/* TEXTO BALÃO (Comercial) */
 .texto-wpp {
   display: none;
   padding: 5px 20px;
   background-color: var(--cor-primaria);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 50px;
-  position: relative;
-  z-index: 2;}
+  position: absolute; /* Mudado para absolute para não quebrar o layout flex */
+  right: 70px;        /* Empurra o texto para a esquerda do ícone do Whats */
+  bottom: 12px;       /* Alinha verticalmente com o botão do Whats */
+  white-space: nowrap;
+  z-index: 2; }
 .texto-wpp::after {
   display: none;
   content: '';
@@ -749,35 +785,46 @@ footer a {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 20px solid var(--cor-primaria);
-  z-index: 1;}
+  z-index: 1; }
+/* CONTAINER DO WHATSAPP (Ícone + Balão) */
+.container-wpp-icone {
+  position: relative; /* Necessário para o posicionamento absolute do texto-wpp */
+  display: flex;
+  align-items: center; }
+/* BOTÃO DO WHATSAPP */
 .botao-wpp {
   padding: 4px 14px;
   background-color: #49E670;
-  border-radius: 200%;
+  border-radius: 50%; /* Corrigido de 200% para 50% (padrão para círculos) */
   cursor: pointer;
   color: #fff;
   font-size: 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  transition: transform 0.2s ease;}
+  transition: transform 0.2s ease; }
 .botao-wpp a {
-  color: #fff;}
-.whatsapp:hover .texto-wpp, .whatsapp:hover .texto-wpp::after  {
-  display: block;}
+  color: #fff;
+  display: flex; /* Garante alinhamento perfeito do ícone interno */ }
+/* Efeito de Hover para exibir o balão */
+.container-wpp-icone:hover .texto-wpp, 
+.container-wpp-icone:hover .texto-wpp::after {
+  display: block; }
+/* BOTÃO DA SETA (TOPO) */
 .botao-up {
-  position: fixed;
+  /* Removido o position: fixed, bottom e right antigos para não dar conflito */
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
-  right: 10px;
-  gap: 20px;
-  z-index: 1000;
-  padding: -0.5px;
   cursor: pointer;
   font-size: 3.5rem;
-  transition: transform 0.2s ease;}
+  line-height: 1; /* Remove espaços fantasmas da fonte do ícone */
+  transition: transform 0.2s ease; }
 .botao-up a {
-  color: #49E670;}
+  color: #49E670;
+  display: flex; }
+/* Efeito de zoom ao passar o mouse em qualquer um dos botões */
+.botao-wpp:hover, .botao-up:hover {
+  transform: scale(1.1); }
+
 /* RESPONVIVO */
 @media (max-width: 1080px) {
     .hero-content h1 {
