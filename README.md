@@ -280,7 +280,7 @@ Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
 </details>
 
 ---
-## 7. CONHEÇA O TIME
+## 6. CONHEÇA O TIME
 
 Nome | Título | Linkedin | X/Twitter | GitHub | Instagram
 ---|---|---|---|---|---
@@ -288,7 +288,7 @@ Silvio Povoas | Desenvolvedor | [sjrpovoas](https://www.linkedin.com/in/sjrpovoa
 Manoel Gomes | Empresário | X | X | X | [@almeidagomespaisagismo](https://www.instagram.com/almeidagomespaisagismo)
 
 ***
-Última atualização: 15/05/2026 - 13:43
+Última atualização: 16/05/2026 - 23:43
 <p align="center">
   &COPY; 2026 SjrPovoaS
 </p>

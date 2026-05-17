@@ -675,6 +675,7 @@ header nav ul li a {
   letter-spacing: 0.5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  
 }
 #avaliacao .final-content :hover {
   background: var(--cor-texto);
@@ -722,7 +723,7 @@ footer .direitos-reservados {
   justify-content: center;
   gap: 25px;
   padding: 5% 10% 5% 3%;
-  border-left: 1px solid rgba(0, 0, 0, 0.5);}
+}
 footer .direitos-reservados p {
   color: var(--cor-extra);
   font-family: var(--fonte-secundaria);}
@@ -746,7 +747,7 @@ footer a {
 .whatsapp {
   position: fixed;
   bottom: 24px;    /* Distância do rodapé */
-  right: 15px;     /* Distância da lateral direita */
+  right: 10px;     /* Distância da lateral direita */
   z-index: 9999;   /* Mantém acima de tudo */
   /* Flexbox para alinhar os elementos verticalmente à direita */
   display: flex;
@@ -826,6 +827,332 @@ footer a {
   transform: scale(1.1); }
 
 /* RESPONVIVO */
+/* --- Telas até 1080px --- */
+@media (max-width: 1080px) {
+  .hero-content h1 {
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+  }
+
+  #quem-somos h2 {
+    width: 90%;
+  }
+
+  #quem-somos .equipe {
+    width: 69%;
+  }
+}
+
+/* --- Telas até 768px --- */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  #quem-somos .equipe {
+    width: 80%;
+  }
+
+  #quem-somos .content {
+    flex-direction: column;
+  }
+
+  #quem-somos h2 {
+    width: 70%;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  #servicos h2 {
+    font-size: 3.5rem;
+  }
+
+  #servicos .legenda-servicos {
+    font-size: 1.2rem;
+  }
+
+  #servicos .esquerda,
+  #servicos .direita {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #servicos .esquerda .conteudo-esquerda,
+  #servicos .direita .conteudo-direita {
+    flex-wrap: wrap;
+  }
+
+  #servicos img {
+    width: 70%;
+  }
+
+  #principios h2 {
+    font-size: 3.5rem;
+  }
+
+  #principios .legenda-principios {
+    font-size: 1.2rem;
+  }
+
+  #principios .principios-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #principios .principios-list div {
+    width: 100%;
+  }
+
+  #contato h2 {
+    font-size: 3.5rem;
+  }
+
+  #contato .legenda-contato {
+    font-size: 1.0rem;
+  }
+
+  #contato .content {
+    flex-direction: column;
+  }
+
+  #contato img {
+    width: 70%;
+  }
+
+  .final-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .parceiros img {
+    width: 100px;
+  }
+
+   /* FORÇA OS BOTÕES DE AVALIAÇÃO DO GOOGLE / CARTÃO A EMPILHAREM VERTICALMENTE */
+   .container-final {
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  #avaliacao .final-content {
+    flex-direction: column !important;
+    width: 100%;
+    margin: 0;
+  }
+
+  #avaliacao .final-content a {
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 14px 20px;
+  }
+
+  footer .logo-footer img {
+    width: 20%;
+  }
+
+  footer .social-media {
+    gap: 15px;
+  }
+
+  footer .social-media .social-icons .icone {
+    font-size: 2rem;
+  }
+
+  .headline-video {
+    font-size: 1.8em;
+  }
+
+  .headline-video span.sub-headline {
+    font-size: 0.8em;
+  }
+
+  .cta-principal-video {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+/* --- Telas até 700px --- */
+@media (max-width: 700px) {
+  .final-content button {
+    margin-top: -70px;
+  }
+}
+
+/* --- Telas até 500px --- */
+@media (max-width: 500px) {
+  .final-content button {
+    padding: 10px 20px;
+    margin-top: -50px;
+  }
+
+  footer .logo-footer img {
+    width: 20%;
+  }
+}
+
+/* --- Telas até 455px (MÁXIMA ATENÇÃO: Mudança crítica para uma coluna) --- */
+@media (max-width: 455px) {
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  #servicos img {
+    width: 100%;
+  }
+
+  #servicos .numeros {
+    width: 80%;
+    min-width: 85px;
+    max-width: 85px;
+    max-height: 85px;
+    min-height: 85px;
+  }
+
+  #principios h2 {
+    font-size: 3rem;
+  }
+
+  .final-content button {
+    margin-top: -40px;
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+ 
+
+  /* FORÇA O CONTAINER DO FOOTER A VIRAR UMA COLUNA SÓ */
+  footer .container-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 35px;
+  }
+
+  /* Força todos os blocos internos do footer a se adaptarem no centro da coluna única */
+  footer .container-externo-social,
+  footer .direitos-reservados,
+  .endereco-telefone-footer {
+    flex: 1 1 100% !important;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  footer .social-media {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .endereco-telefone-footer {
+    justify-content: center !important;
+  }
+}
+
+/* --- Telas até 375px --- */
+@media (max-width: 375px) {
+  #servicos h2,
+  #principios h2 {
+    font-size: 2.75rem;
+  }
+
+  footer .logo-footer img {
+    width: 20%;
+  }
+}
+
+/* --- Telas até 345px (Celulares muito pequenos) --- */
+@media (max-width: 345px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  #quem-somos h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 100%;
+  }
+
+  #quem-somos .equipe {
+    width: 100%;
+  }
+
+  #servicos .esquerda .conteudo-esquerda .titulo-esquerda h3,
+  #servicos .direita .conteudo-direita .titulo-direita h3 {
+    gap: 10px;
+    font-size: 2rem;
+    margin: 20px 0;
+    align-self: center;
+  }
+
+  #principios h2 {
+    font-size: 2.25rem;
+  }
+
+  .final-content button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  footer .social-media .social-icons .icone {
+    font-size: 1.2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  footer .logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  /* Ajustado o tamanho da logo no celular pequeno para manter a proporção na coluna centralizada */
+  footer .logo-footer img {
+    width: 45% !important;
+    max-width: 140px;
+  }
+
+  footer .direitos-reservados {
+    border-left: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 6% 0 0 0;
+    width: 100%;
+  }
+
+  /* Organiza o menu do rodapé de forma harmônica na base da coluna única */
+  footer .menu-footer,
+  .menu-footer {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu-footer li {
+    flex: 1 1 calc(50% - 10px);
+    aspect-ratio: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media (max-width: 1080px) {
     .hero-content h1 {
         font-size: 3.75rem;
@@ -875,13 +1202,13 @@ footer a {
     #contato h2 {
         font-size: 3.5rem;}  
     #contato .legenda-contato {
-        font-size: 1.2rem;}
+        font-size: 1.0rem;}
     #contato .content {
         flex-direction: column;}
     #contato img {
         width: 70%;}
     .final-content h2 {
-        font-size: 1.8rem;}
+        font-size: 1.6rem;}
     .parceiros img {
         width: 100px;}
     footer .logo-footer img {
@@ -922,69 +1249,110 @@ footer a {
         font-size: 2.75rem;}
     footer .logo-footer img {
         width: 20%;}}
-@media (max-width:345px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-        line-height: 3.5rem;}
-    #quem-somos h2 {
-        font-size: 2rem;
-        line-height: 3rem;
-        width: 100%;}
-    #quem-somos .equipe {
-        width: 100%;}
-    #servicos .esquerda .conteudo-esquerda .titulo-esquerda h3,
-    #servicos .direita .conteudo-direita .titulo-direita h3 {
-        gap: 10px;
-        font-size: 2rem;
-        margin: 20px 0;
-        align-self: center;}
-    #principios h2 {
-        font-size: 2.25rem;}
-    .final-content button {
-        padding: 10px 15px;
-        font-size: 1rem;}
-    footer .social-media .social-icons .icone {
-        font-size: 1.2rem;}
-    footer p {
-        font-size: 1rem;}
-    footer .logo-footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5%;}
-    footer .logo-footer img {
-        width: 20%;}
-    footer .container-interno {
-        justify-content: left;
-        margin-left: 0;}
-    footer .social-media {
-        flex-direction: row;
-        display: flex;
-        justify-content: left;
-        align-items: center;}
-    .endereco-telefone-footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: left;
-        align-items: center;}
-    footer .direitos-reservados {
-        border-left: 0px;
-        border-top: 1px solid rgba(0, 0, 0, 0.5);
-        padding: 4%;
-        align-items: center;}
-    footer .menu-footer {
-        flex-direction: row;
-        flex-wrap: wrap;}
-    .menu-footer {
-        display: flex;
-        flex-wrap: wrap;}
-    .menu-footer li {
-        flex: 1 1 calc(50% - 10px);
-        aspect-ratio: 4;
-        display: flex;
-        align-items: center;
-        justify-content: center;}}
+        @media (max-width: 455px) {
+          /* Força o container do footer a virar APENAS UMA COLUNA */
+          footer .container-footer {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              gap: 35px;
+          }
+      
+          /* Ajusta todos os blocos internos para ocuparem a largura total da coluna única */
+          footer .container-externo-social,
+          footer .direitos-reservados,
+          .endereco-telefone-footer {
+              flex: 1 1 100% !important;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center; /* Centraliza os textos e ícones no celular */
+              justify-content: center;
+              text-align: center;
+          }
+      
+          /* Ajusta os links de Redes Sociais para ficarem centralizados na coluna */
+          footer .social-media {
+              justify-content: center !important;
+              width: 100%;
+          }
+          
+          .endereco-telefone-footer {
+              justify-content: center !important;
+          }
+      }
+      
+      /* Seu bloco original de 345px mantendo suas otimizações de fontes */
+      @media (max-width: 345px) {
+          .hero-content h1 {
+              font-size: 2.5rem;
+              line-height: 3.5rem;
+          }
+          #quem-somos h2 {
+              font-size: 2rem;
+              line-height: 3rem;
+              width: 100%;
+          }
+          #quem-somos .equipe {
+              width: 100%;
+          }
+          #servicos .esquerda .conteudo-esquerda .titulo-esquerda h3,
+          #servicos .direita .conteudo-direita .titulo-direita h3 {
+              gap: 10px;
+              font-size: 2rem;
+              margin: 20px 0;
+              align-self: center;
+          }
+          #principios h2 {
+              font-size: 2.25rem;
+          }
+          .final-content button {
+              padding: 10px 15px;
+              font-size: 1rem;
+          }
+          footer .social-media .social-icons .icone {
+              font-size: 1.2rem;
+          }
+          footer p {
+              font-size: 1rem;
+          }
+          footer .logo-footer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 5%;
+          }
+          
+          /* Aumentado o tamanho da logo no celular pequeno para não sumir */
+          footer .logo-footer img {
+              width: 45%; 
+              max-width: 140px;
+          }
+          
+          footer .direitos-reservados {
+              border-left: 0px;
+              border-top: 1px solid rgba(0, 0, 0, 0.15);
+              padding: 6% 0 0 0;
+              width: 100%;
+          }
+          
+          /* Garante que o menu do rodapé também empilhe ou quebre em linhas centralizadas */
+          footer .menu-footer, .menu-footer {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+              padding: 0;
+              gap: 10px;
+          }
+          .menu-footer li {
+              flex: 1 1 calc(50% - 10px);
+              aspect-ratio: 4;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+      }
 /* Estilos Específicos da Galeria de Plantas */
 .galeria-plantas {
   padding: 60px 20px;
