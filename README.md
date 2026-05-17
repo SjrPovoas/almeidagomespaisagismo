@@ -280,7 +280,7 @@ Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
 </details>
 
 ---
-## 6. CONHEÇA O TIME
+## 7. CONHEÇA O TIME
 
 Nome | Título | Linkedin | X/Twitter | GitHub | Instagram
 ---|---|---|---|---|---
