@@ -1056,6 +1056,7 @@ footer a {
 
   .endereco-telefone-footer {
     justify-content: center !important;
+    font-size: 0.75rem;
   }
 }
 
@@ -1222,10 +1223,10 @@ footer a {
         margin-top: -70px;}}
 @media (max-width:500px) {
     .final-content button {
-        padding: 10px 20px;
+        padding: 20px 0;
         margin-top: -50px;}
     footer .logo-footer img {
-        width: 20%;}}
+        width: 40%;}}
 @media (max-width:455px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -1524,3 +1525,35 @@ footer a {
           width: 90%; /* Ocupa quase a largura total em telas menores */
           justify-content: center; }
   }
+
+  /* Layout Admin */
+.admin-header {
+  padding: 20px 15px 10px;
+  text-align: center;
+  margin: 100px 0 5px;
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: #333;
+}
+
+.admin-btn {
+  display: block; /* Garante que fiquem um embaixo do outro */
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Garante que os cards fiquem alinhados lado a lado corretamente */
+.container-final {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}

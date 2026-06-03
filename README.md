@@ -216,71 +216,21 @@ Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
 </ul>
 </details>
 
+## 6. PAINEL ADMINISTRATIVO
+
 <details>
-<summary>ZOHO MAIL (CLIENTE QUERIA TUDO NO GMAIL)</summary>
+<summary>Autenticação Básica (Basic Auth) COM "Password Protection" utilizando Edge Middleware</summary>
+
+- [Painel Administrativo da Almeida Gomes Paisagismo](https://almeidagomespaisagismo.com.br/admin.html)
+
 <ul>
-<li><b>É um serviço de hospedagem de email.</b>
-<br>
-O alias é uma camada extra sobre uma conta de usuário existente. Ele não possui uma caixa de entrada para fazer login e ler e-mails.
-<br>
-Escolha o Zoho Mail se você precisa de uma conta profissional real, onde possa logar, guardar e-mails e ter uma estrutura de empresa.
-<br>
-Oferece um plano gratuito generoso com aliases ilimitados.
-</li>
-</ul>
-<ul>
-<li><b>Verificação de Domínio (Obrigatório primeiro)</b>
-<br>
-Nome: @ ou zb******* (o Zoho te dará esse código)
-<br>
-Valor: zoho-verification=zb********.zmverify.zoho.com
-</li>
-<li><b>Registros MX</b>
-<br>
-Prioridade | Host/Nome | Valor (Destino)
-<br>
-10 | @ | mx.zoho.com
-<br>
-20 | @ | mx2.zoho.com
-<br>
-50 | @ | mx3.zoho.com
-</li>
-<li><b>Registro TXT (DKIM) para que você possa enviar e-mails sem ser bloqueado pelos servidores de destino</b>
-<br>
-Nome: zmail._domainkey
-<br>
-Valor: chave criptográfica longa
-</li>
-<li><b>Registro TXT (SPF) para garantir que os e-mails não caiam no spam</b>
-<br>
-Nome: @
-<br>
-Valor: v=spf1 include:zoho.com -all
-<br>
-<br>
-<b>ATT:</b> Após inserir os registros, você precisa clicar em "Verificar" no painel administrativo deles.
-<br>
-<br>
-</li>
-<li><b>Configurações do Servidor SMTP (Google)</b>
-<br>
-Servidor SMTP:	smtp.gmail.com
-<br>
-Porta (SSL):	465
-<br>
-Porta (TLS/STARTTLS):	587 (Recomendada para Next.js/Node.js)
-<br>
-Requer Autenticação:	Sim
-<br>
-Usuário: almeidagomespaisagismo@gmail.com
-<br>
-Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
-</li>
+<li>Necessidade:</li>
+Gerar Documentos Online com privacidade, acessar documentos/projetos privados e editá=los no canva como por ex: Cartão de Visitas e Uniforme/Camisetas.
 </ul>
 </details>
 
 ---
-## 6. CONHEÇA O TIME
+## 7. CONHEÇA O TIME
 
 Nome | Título | Linkedin | X/Twitter | GitHub | Instagram
 ---|---|---|---|---|---
@@ -288,7 +238,7 @@ Silvio Povoas | Desenvolvedor | [sjrpovoas](https://www.linkedin.com/in/sjrpovoa
 Manoel Gomes | Empresário | X | X | X | [@almeidagomespaisagismo](https://www.instagram.com/almeidagomespaisagismo)
 
 ***
-Última atualização: 16/05/2026 - 23:43
+Última atualização: 02/06/2026 - 23:43
 <p align="center">
   &COPY; 2026 SjrPovoaS
 </p>
