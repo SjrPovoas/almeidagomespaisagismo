@@ -17,18 +17,18 @@
     <script>
         // Hash Gerado em: https://emn178.github.io/online-tools/sha256.html
         const HASH_CORRETO = "0b300ff33ba8d53cff5c966fcfcf04efb4fda7d46394998fb33788f99fe9772c";
-    
+
         async function verificarSenha() {
             const senha = prompt("Digite a senha de Acesso ao Painel Administrativo da Almeida Gomes Paisagismo:");
             if (!senha) { window.location.href = "/"; return; }
-    
+
             const encoder = new TextEncoder();
             const data = encoder.encode(senha);
             // Usamos SHA-256 em vez de MD5
             const hashBuffer = await crypto.subtle.digest('SHA-256', data);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    
+
             if (hashHex === HASH_CORRETO) {
                 document.body.style.display = 'block';
             } else {
@@ -36,11 +36,20 @@
                 window.location.href = "/";
             }
         }
-        
+
         document.write('<style>body { display: none; }</style>');
         window.onload = verificarSenha;
     </script>
+    <script>
+        function fazerLogout() {
+            // Redireciona para a home
+            window.location.href = "/";
+
+            // Dica para o usuário:
+            alert("Para garantir que a sessão seja encerrada, feche esta aba ou limpe o cache do seu navegador.");
+        }</script>
 </head>
+
 <body>
     <!-- Cabeçalho Administrativo -->
     <header class="header">
@@ -53,10 +62,14 @@
     </header>
 
     <section class="admin-header">
-        <!-- Título da Seção de Gestão -->
+        <button onclick="fazerLogout()" class="admin-btn admin-btn-sair"
+            style="background-color: #d9534f; color: white;">
+            Sair do Painel
+        </button>
+        
         <div class="final">
             <h1>Área Administrativa</h1>
-            <p>Gerenciamento de documentos online, cartão de visista, uniforme e projetos Canva.</p>
+            <p>Gerenciamento de documentos online, cartão de visita, uniforme e projetos Canva.</p>
         </div>
     </section>
 
@@ -70,10 +83,11 @@
                 <!-- Grupo: Gerador de Documento Online -->
                 <div class="final-content">
                     <h3>Gerador de Documentos Online</h3>
-                    <a href="https://almeidagomespaisagismo.com.br/gerador-online-de-documentos.html" target="_blank" class="admin-btn">
+                    <a href="https://almeidagomespaisagismo.com.br/gerador-online-de-documentos.html" target="_blank"
+                        class="admin-btn">
                         <i class="bi bi-file-earmark-check-fill"></i> Abrir documento
                     </a>
-                </div>                
+                </div>
 
                 <!-- Grupo: Cartão de Visitas -->
                 <div class="final-content">
@@ -123,7 +137,7 @@
                         <i class="bi bi-pencil-square"></i> Editar no Canva
                     </a>
                 </div>
-                
+
             </div>
         </section>
     </main>

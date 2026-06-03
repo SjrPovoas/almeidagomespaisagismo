@@ -1,41 +1,32 @@
 {
-    "redirects": [
-      {
-        "source": "/index.html",
-        "destination": "/",
-        "permanent": true
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "almeidagomespaisagismo.vercel.app"
-          }
-        ],
-        "destination": "https://almeidagomespaisagismo.com.br/:path*",
-        "permanent": true
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "www.almeidagomespaisagismo.com.br"
-          }
-        ],
-        "destination": "https://almeidagomespaisagismo.com.br/:path*",
-        "permanent": true
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/sitemap.xml",
-        "destination": "/sitemap.xml"
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt"
-      }
-    ]
-  }
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "almeidagomespaisagismo.vercel.app"
+        }
+      ],
+      "destination": "https://almeidagomespaisagismo.com.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.almeidagomespaisagismo.com.br"
+        }
+      ],
+      "destination": "https://almeidagomespaisagismo.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}
