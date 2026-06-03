@@ -219,10 +219,15 @@ Senha: Senha de App de 16 dígitos (não é a senha da conta gmail)
 ## 6. PAINEL ADMINISTRATIVO
 
 <details>
-<summary>Autenticação Básica (Basic Auth) COM "Password Protection" utilizando Edge Middleware</summary>
+<summary>AUTENTICAÇÃO COM HASH SHA256</summary>
 
 - [Painel Administrativo da Almeida Gomes Paisagismo](https://almeidagomespaisagismo.com.br/admin.html)
 
+Utiliza Hash SHA256 Gerado em: https://emn178.github.io/online-tools/sha256.html para não expor senha em site estático.
+<br>
+A autenticação e verificação com SHA-256 não funciona como uma criptografia reversível, mas sim como uma "impressão digital" (hash). O sistema calcula o hash do dado original e compara se ele é idêntico ao hash esperado; se houver qualquer alteração no arquivo ou senha, o código gerado será totalmente diferente.
+<br>
+Autenticação de Senhas: Em vez de guardar a sua senha em texto puro, o site guarda apenas o hash SHA-256 dela. Quando você faz login, o site aplica o algoritmo à senha que você digitou e compara com o hash salvo no banco de dados.
 <ul>
 <li>Necessidade:</li>
 Gerar Documentos Online com privacidade, acessar documentos/projetos privados e editá=los no canva como por ex: Cartão de Visitas e Uniforme/Camisetas.
@@ -238,7 +243,7 @@ Silvio Povoas | Desenvolvedor | [sjrpovoas](https://www.linkedin.com/in/sjrpovoa
 Manoel Gomes | Empresário | X | X | X | [@almeidagomespaisagismo](https://www.instagram.com/almeidagomespaisagismo)
 
 ***
-Última atualização: 02/06/2026 - 21:00
+Última atualização: 02/06/2026 - 23:00
 <p align="center">
   &COPY; 2026 SjrPovoaS
 </p>
