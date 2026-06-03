@@ -1,3 +1,4 @@
+// middleware.js na RAIZ do projeto
 export default async function middleware(request) {
     const url = new URL(request.url);
   
@@ -12,19 +13,16 @@ export default async function middleware(request) {
         const [decodedUser, decodedPassword] = atob(authValue).split(':');
   
         if (decodedUser === user && decodedPassword === password) {
-          // Se a senha estiver correta, passa a requisição adiante para o arquivo real
-          return null; 
+          return new Response(null, { status: 200 }); // Autenticado, permite prosseguir
         }
       }
   
-      // Se falhar, exige autenticação
+      // Se falhar, pede senha
       return new Response('Auth Required', {
         status: 401,
-        headers: {
-          'WWW-Authenticate': 'Basic realm="Acesso Restrito"',
-        },
+        headers: { 'WWW-Authenticate': 'Basic realm="Acesso Restrito"' },
       });
     }
   
-    return null;
+    return new Response(null, { status: 200 });
   }
