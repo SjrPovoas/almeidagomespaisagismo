@@ -1,24 +1,29 @@
-import { NextResponse } from 'next/server';
+export const config = {
+  matcher: '/admin.html',
+};
 
-export function middleware(req) {
-  const basicAuth = req.headers.get('authorization');
-  const url = req.nextUrl;
+export default function middleware(request) {
+  const url = new URL(request.url);
+  
+  // Obtém as credenciais das variáveis de ambiente
+  const basicAuth = request.headers.get('authorization');
+  const user = process.env.ADMIN_USER;
+  const password = process.env.ADMIN_PASS;
 
-  if (url.pathname.startsWith('/admin')) {
-    if (basicAuth) {
-      const authValue = basicAuth.split(' ')[1];
-      const [user, pwd] = atob(authValue).split(':');
+  if (basicAuth) {
+    const authValue = basicAuth.split(' ')[1];
+    const [decodedUser, decodedPassword] = atob(authValue).split(':');
 
-      if (user === process.env.ADMIN_USER && pwd === process.env.ADMIN_PASS) {
-        return NextResponse.next();
-      }
+    if (decodedUser === user && decodedPassword === password) {
+      return new Response(null, { status: 200 }); // Acesso permitido
     }
-
-    return new NextResponse('Autenticação necessária', {
-      status: 401,
-      headers: { 'WWW-authenticate': 'Basic realm="Secure Area"' },
-    });
   }
 
-  return NextResponse.next();
+  // Se não autenticado, solicita login
+  return new Response('Auth Required', {
+    status: 401,
+    headers: {
+      'WWW-Authenticate': 'Basic realm="Acesso Restrito"',
+    },
+  });
 }
