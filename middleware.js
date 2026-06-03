@@ -9,16 +9,14 @@ export default async function middleware(request) {
 
   if (basicAuth) {
     const authValue = basicAuth.split(' ')[1];
-    // Decodifica o base64
     const [decodedUser, decodedPassword] = atob(authValue).split(':');
 
     if (decodedUser === user && decodedPassword === password) {
-      // Retorna 'null' para deixar o request original (o admin.html) passar
-      return new Response(null); 
+      // Para servir o arquivo corretamente, realizamos uma reescrita interna
+      return Response.rewrite(new URL('/admin.html', request.url));
     }
   }
 
-  // Se a senha falhar ou não existir, pede autenticação
   return new Response('Auth Required', {
     status: 401,
     headers: {
