@@ -1,11 +1,6 @@
-export const config = {
-  matcher: '/admin.html',
-};
+import { NextResponse } from 'next/server';
 
 export default function middleware(request) {
-  const url = new URL(request.url);
-  
-  // Obtém as credenciais das variáveis de ambiente
   const basicAuth = request.headers.get('authorization');
   const user = process.env.ADMIN_USER;
   const password = process.env.ADMIN_PASS;
@@ -15,11 +10,11 @@ export default function middleware(request) {
     const [decodedUser, decodedPassword] = atob(authValue).split(':');
 
     if (decodedUser === user && decodedPassword === password) {
-      return new Response(null, { status: 200 }); // Acesso permitido
+      // ESTA É A CORREÇÃO:
+      return NextResponse.next(); 
     }
   }
 
-  // Se não autenticado, solicita login
   return new Response('Auth Required', {
     status: 401,
     headers: {
